@@ -5,13 +5,16 @@
 from multiprocessing import Pool
 #Asyncio dùng asyncio lập trình đồng bộ doroutine và event loop
 #Thư viện như concurrent.futures, joblib, Ray
-import concurrent.futures
-def process_data(data):
-    result = data ** 2
-    print(f"Xử lý dữ liệu {data}: Kết quả = {result}")
-data = [1, 2, 3, 4, 5]
-with concurrent.futures.ThreadPoolExecutor() as executor:
-    executor.map(process_data, data)
+from concurrent.futures import ThreadPoolExecutor
+
+def calculate_sum(file):
+    return 1
+    # Tính toán tổng của tệp và trả về kết quả
+
+file_list = ["file1.txt", "file2.txt", ..., "file10.txt"]
+with ThreadPoolExecutor(max_workers=4) as executor:
+    results = list(executor.map(calculate_sum, file_list))
+
 
 
 
