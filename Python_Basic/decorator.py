@@ -1,7 +1,6 @@
-#Decorator (trang trí) cho phép bọc 1 hàm của 1 phương thức của đối tượng bằng 1 hàm khác. Dùng thực hiện các tác vụ như đăng nhập, ghi log, đo thời gian...
+# Decorator (trang trí) cho phép bọc 1 hàm hoặc 1 phương thức của đối tượng bằng 1 hàm khác. Dùng thực hiện các tác  vụ như đăng nhập, ghi log, đo thời gian...
 
 import time
-# Định nghĩa một decorator để ghi lại thời gian thực thi
 def timing_decorator(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
@@ -12,12 +11,10 @@ def timing_decorator(func):
         return result
     return wrapper
 
-# Sử dụng decorator trên một hàm
 @timing_decorator
 def slow_function():
     time.sleep(2)  # Giả lập một hàm mất thời gian để thực thi
 
+
 # Gọi hàm đã được trang bị decorator
 slow_function()
-
-

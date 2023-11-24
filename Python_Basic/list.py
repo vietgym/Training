@@ -1,8 +1,10 @@
 #list (danh sách) là ctdl lưu trữ 1 tập hợp phần tử
 #tạo
 my_list = [1, 2, 3, "Hello", 5]
-empty_list = []
+print(my_list)
 
+'''
+#empty_list = []
 first_element = my_list[0] #truy cập phần tử đầu tiên
 my_list[4] = "world" #gán gt pt
 
@@ -21,5 +23,4 @@ my_list.reverse()  # Đảo ngược các phần tử
 
 for i in range(len(my_list)): #duyệt
     print(my_list[i])
-
-print(my_list)
+'''
