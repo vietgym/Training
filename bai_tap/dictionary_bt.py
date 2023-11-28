@@ -11,8 +11,8 @@ def find(data):
             continue
         if value:
             a = key
+            data["index_result"] = a
             break
-    data["index_result"] = a
     return data
 
 
@@ -29,6 +29,6 @@ data1 = {
         "9": 234,
         "10": None
     },
-    "index_result": "7"
+    "index_result": "1"
 }
 dis(find(data1))
